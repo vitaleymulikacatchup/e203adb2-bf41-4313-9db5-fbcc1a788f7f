@@ -1,84 +1,93 @@
-"use client";
-
+use client
 import { SiteThemeProvider } from '@/components/sections/ThemeProvider';
-import NavbarStyleApple from '@/components/navigation/NavbarStyleApple/NavbarStyleApple';
-import FrameHero from '@/components/sections/layouts/hero/FrameHero';
-import CtaAbout from '@/components/sections/layouts/about/CtaAbout';
-import HowToBuy2D from '@/components/sections/layouts/howtobuy/2DHTB';
-import BigNumberTokenomics from '@/components/sections/layouts/tokenomics/BigNumberTokenomics';
-import CentralFAQ from '@/components/sections/layouts/faq/CentralFAQ';
-import FooterBase from '@/components/footer/FooterBase';
-import { DollarSign } from 'lucide-react';
-import { Users } from 'lucide-react';
+import NavbarStyleMinimal from '@/components/navigation/NavbarStyleMinimal';
+import BillboardHero from '@/components/sections/layouts/hero/BillboardHero';
+import SocialsAbout from '@/components/sections/layouts/about/SocialsAbout';
+import HowToBuy3D from '@/components/sections/layouts/howtobuy/3DHTB';
+import TextGridTokenomics from '@/components/sections/layouts/tokenomics/TextGridTokenomics';
+import ImageFAQ from '@/components/sections/layouts/faq/ImageFAQ';
+import YearRoadmapTimeline from '@/components/sections/layouts/roadmap/YearRoadmapTimeline';
+import FooterLogoEmphasisBackgroundGradient from '@/components/footer/FooterLogoEmphasisBackgroundGradient';
 
 export default function Home() {
   return (
-    <SiteThemeProvider theme={{ styleVariant: "funAndTrendy", colorTemplate: 1, textAnimation: "slide" }}>
+    <SiteThemeProvider theme={{ styleVariant: 'funAndTrendy', colorTemplate: 1, textAnimation: 'slide' }}>
       <div id="nav" data-section="nav">
-        <NavbarStyleApple 
-          navItems={[{ name: "hero", id: "hero" }, { name: "about", id: "about" }, { name: "how-to-buy", id: "how-to-buy" }, { name: "tokenomics", id: "tokenomics" }, { name: "faq", id: "faq" }, { name: "footer", id: "footer" }]}
+        <NavbarStyleMinimal
           logoSrc="/images/logo.svg"
-          brandName="DogeCoin"
+          logoAlt="DOGE COIN"
+          buttonText="Get DOGE"
+          onButtonClick={() => alert('Button clicked!')}
         />
       </div>
 
       <div id="hero" data-section="hero" className="scroll-mt-24">
-        <FrameHero
-          title="Welcome to DogeCoin"
-          description="Join the community of playful cryptocurrency enthusiasts."
-          primaryButtonText="Get Started"
-          secondaryButtonText="Learn More"
+        <BillboardHero
+          title="Welcome to DogeCoin!"
+          subtitle="The best memecoin of all time!"
         />
       </div>
 
       <div id="about" data-section="about" className="scroll-mt-24">
-        <CtaAbout
-          title="About DogeCoin"
-          descriptions={["DogeCoin is a fun and vibrant memecoin dedicated to community involvement and playful experiences.", "Join us in the Doge revolution where everyone can participate, share, and grow together!"]}
+        <SocialsAbout
+          title="Connect with us"
+          descriptions={["Find us on Telegram!", "Follow us on Twitter!", "Join our Community!"]}
         />
       </div>
 
       <div id="how-to-buy" data-section="how-to-buy" className="scroll-mt-24">
-        <HowToBuy2D
-          variant="reveal"
+        <HowToBuy3D
+          title="How to Buy DOGE"
+          steps={[
+            { title: "Step 1", description: "Create a Wallet", image: "/images/placeholder1.avif", position: 'left', isCenter: false },
+            { title: "Step 2", description: "Choose an Exchange", image: "/images/placeholder2.avif", position: 'center', isCenter: true },
+            { title: "Step 3", description: "Trade for DOGE", image: "/images/placeholder3.avif", position: 'right', isCenter: false },
+          ]}
         />
       </div>
 
       <div id="tokenomics" data-section="tokenomics" className="scroll-mt-24">
-        <BigNumberTokenomics
-          title="Tokenomics"
-          description="A transparent view of DogeCoin's economy."
-          kpiItems={[
-            { value: "1000000000", description: "Total Supply", longDescription: "The cap for DogeCoin, ensuring scarcity is key to value.", icon: DollarSign },
-            { value: "100000000", description: "Market Cap", longDescription: "Total value of all DogeCoins in issuance.", icon: DollarSign },
-            { value: "10000000", description: "Active Community", longDescription: "Active users and transactions driving DogeCoin growth.", icon: Users }
+        <TextGridTokenomics
+          title="Tokenomics Overview"
+          description="A brief overview of DOGE's tokenomics"
+          tokenData={[
+            { value: "100M", description: "Total Supply" },
+            { value: "1M", description: "Market Cap" },
+            { value: "10%," description: "Tax" },
           ]}
         />
       </div>
 
       <div id="faq" data-section="faq" className="scroll-mt-24">
-        <CentralFAQ
+        <ImageFAQ
           items={[
-            { title: "What is DogeCoin?", content: "DogeCoin is a fun memecoin born from the famous 'Doge' meme." },
-            { title: "How to buy DogeCoin?", content: "You can buy DogeCoin on various exchanges using cryptocurrency or fiat." },
-            { title: "Is DogeCoin safe?", content: "DogeCoin is secure and backed by a passionate community." },
-            { title: "What can I do with DogeCoin?", content: "You can HODL, trade, or even use it for tipping!" }
+            { title: "What is Dogecoin?", content: "Dogecoin is a cryptocurrency..." },
+            { title: "How to buy DOGE?", content: "You can buy DOGE on several exchanges..." },
+            { title: "What makes DOGE unique?", content: "It has a vibrant community!" },
+          ]}
+        />
+      </div>
+
+      <div id="roadmap" data-section="roadmap" className="scroll-mt-24">
+        <YearRoadmapTimeline
+          items={[
+            { year: "2020", title: "Launch", description: "DogeCoin launched successfully!" },
+            { year: "2021", title: "Community Growth", description: "The community grows significantly!" },
+            { year: "2022", title: "Tokenomics Revisions", description: "New tokenomics implemented successfully!" },
           ]}
         />
       </div>
 
       <div id="footer" data-section="footer" className="scroll-mt-24">
-        <FooterBase
+        <FooterLogoEmphasisBackgroundGradient
           logoSrc="/images/logo.svg"
-          logoWidth={150}
-          logoHeight={50}
-          columns={[
-            { title: "Explore", items: [{ label: "About", onClick: () => {} }, { label: "How to Buy", onClick: () => {} }, { label: "Tokenomics", onClick: () => {} }] },
-            { title: "Community", items: [{ label: "FAQ", onClick: () => {} }, { label: "Join Us", onClick: () => {} }] },
-            { title: "Legal", items: [{ label: "Privacy Policy", onClick: () => {} }, { label: "Terms of Service", onClick: () => {} }] }
+          logoAlt="DOGE COIN"
+          logoText="DOGE COIN"
+          items={[
+            { label: "Contact", onClick: () => alert('Contact clicked!') },
+            { label: "Privacy", onClick: () => alert('Privacy clicked!') },
+            { label: "Terms", onClick: () => alert('Terms clicked!') },
           ]}
-          copyrightText="© 2023 DogeCoin. All rights reserved."
-          onPrivacyClick={() => {}}
         />
       </div>
     </SiteThemeProvider>
