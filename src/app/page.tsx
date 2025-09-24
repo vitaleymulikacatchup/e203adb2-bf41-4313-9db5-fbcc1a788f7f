@@ -48,9 +48,9 @@ export default function Home() {
           title="Tokenomics"
           description="A transparent view of DogeCoin's economy."
           kpiItems={[
-            { value: "1B", description: "Total Supply", longDescription: "The cap for DogeCoin, ensuring scarcity is key to value.", icon: "Lucide icon here" },
-            { value: "100M", description: "Market Cap", longDescription: "Total value of all DogeCoins in issuance.", icon: "Lucide icon here" },
-            { value: "10M", description: "Active Community", longDescription: "Active users and transactions driving DogeCoin growth.", icon: "Lucide icon here" }
+            { value: "1B", description: "Total Supply", longDescription: "The cap for DogeCoin, ensuring scarcity is key to value.", icon: 1 },
+            { value: "100M", description: "Market Cap", longDescription: "Total value of all DogeCoins in issuance.", icon: 1 },
+            { value: "10M", description: "Active Community", longDescription: "Active users and transactions driving DogeCoin growth.", icon: 1 }
           ]}
         />
       </div>
