@@ -34,7 +34,7 @@ export default function Home() {
       <div id="about" data-section="about" className="scroll-mt-24">
         <CtaAbout 
           title="What is DogeCoin?" 
-          descriptions={['An innovative memecoin founded on enthusiasm.', 'Join us as we revolutionize digital currency.']} 
+          descriptions={["An innovative memecoin founded on enthusiasm.", "Join us as we revolutionize digital currency."]} 
         />
       </div>
       <div id="how-to-buy" data-section="how-to-buy" className="scroll-mt-24">
