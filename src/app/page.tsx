@@ -15,7 +15,6 @@ export default function Home() {
       <div id="nav" data-section="nav">
         <NavbarStyleMinimal
           logoSrc="/images/logo.svg"
-          logoAlt="DOGE COIN"
           buttonText="Get DOGE"
           onButtonClick={() => alert('Button clicked!')}
         />
