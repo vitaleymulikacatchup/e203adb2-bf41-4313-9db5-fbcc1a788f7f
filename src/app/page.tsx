@@ -16,7 +16,6 @@ export default function Home() {
         <NavbarStyleApple 
           navItems={[{ name: "hero", id: "hero" }, { name: "about", id: "about" }, { name: "how-to-buy", id: "how-to-buy" }, { name: "tokenomics", id: "tokenomics" }, { name: "faq", id: "faq" }, { name: "footer", id: "footer" }]}
           logoSrc="/images/logo.svg"
-          logoAlt="DogeCoin Logo"
           brandName="DogeCoin"
         />
       </div>
@@ -48,9 +47,9 @@ export default function Home() {
           title="Tokenomics"
           description="A transparent view of DogeCoin's economy."
           kpiItems={[
-            { value: "1B", description: "Total Supply", longDescription: "The cap for DogeCoin, ensuring scarcity is key to value.", icon: 1 },
-            { value: "100M", description: "Market Cap", longDescription: "Total value of all DogeCoins in issuance.", icon: 1 },
-            { value: "10M", description: "Active Community", longDescription: "Active users and transactions driving DogeCoin growth.", icon: 1 }
+            { value: 1000000000, description: "Total Supply", longDescription: "The cap for DogeCoin, ensuring scarcity is key to value.", icon: { name: "DollarSign" } },
+            { value: 100000000, description: "Market Cap", longDescription: "Total value of all DogeCoins in issuance.", icon: { name: "DollarSign" } },
+            { value: 10000000, description: "Active Community", longDescription: "Active users and transactions driving DogeCoin growth.", icon: { name: "Users" } }
           ]}
         />
       </div>
