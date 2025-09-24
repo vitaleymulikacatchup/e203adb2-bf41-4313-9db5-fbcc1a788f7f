@@ -1,4 +1,4 @@
-use client
+"use client";
 import { SiteThemeProvider } from '@/components/sections/ThemeProvider';
 import NavbarStyleMinimal from '@/components/navigation/NavbarStyleMinimal';
 import BillboardHero from '@/components/sections/layouts/hero/BillboardHero';
@@ -53,7 +53,7 @@ export default function Home() {
           tokenData={[
             { value: "100M", description: "Total Supply" },
             { value: "1M", description: "Market Cap" },
-            { value: "10%," description: "Tax" },
+            { value: "10%,", description: "Tax" },
           ]}
         />
       </div>
